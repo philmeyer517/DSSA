@@ -1,0 +1,239 @@
+/* assets/css/admin.css */
+/* Styles for admin profile pages */
+
+.dssa-field-section {
+    background: #fff;
+    border: 1px solid #ccd0d4;
+    margin: 20px 0;
+    padding: 20px;
+    box-shadow: 0 1px 1px rgba(0,0,0,.04);
+}
+
+.dssa-field-section h3 {
+    margin-top: 0;
+    color: #23282d;
+    border-bottom: 1px solid #ccd0d4;
+    padding-bottom: 10px;
+}
+
+.dssa-readonly-field {
+    background-color: #f5f5f5 !important;
+    border-color: #ddd !important;
+    color: #777 !important;
+    cursor: not-allowed !important;
+}
+
+.dssa-readonly-note {
+    font-size: 12px;
+    color: #666;
+    font-style: italic;
+    margin-top: 5px;
+}
+
+/* Table styles for user list */
+.column-dssa_member_number,
+.column-dssa_branch,
+.column-dssa_is_legacy {
+    width: 150px;
+}
+
+/* Quick edit styles */
+.inline-edit-row fieldset .inline-edit-col label span.dssa-field {
+    display: inline-block;
+    margin-left: 10px;
+    color: #666;
+    font-size: 12px;
+}
+
+/* Branch management styles */
+.branch-status-active {
+    color: #46b450;
+    font-weight: bold;
+}
+
+.branch-status-inactive {
+    color: #dc3232;
+    font-weight: bold;
+}
+
+/* CSV upload styles */
+.dssa-csv-upload {
+    background: #fff;
+    border: 2px dashed #ccd0d4;
+    padding: 30px;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.dssa-csv-upload.drag-over {
+    border-color: #0073aa;
+    background: #f0f8ff;
+}
+
+.dssa-csv-upload input[type="file"] {
+    margin: 20px auto;
+    display: block;
+}
+
+.dssa-upload-progress {
+    display: none;
+    margin: 20px 0;
+}
+
+.dssa-upload-progress .progress-bar {
+    height: 20px;
+    background: #f5f5f5;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.dssa-upload-progress .progress-fill {
+    height: 100%;
+    background: #0073aa;
+    width: 0%;
+    transition: width 0.3s ease;
+}
+
+/* Settings page styles */
+.dssa-pmpro-helper-field {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.dssa-pmpro-helper-field:last-child {
+    border-bottom: none;
+}
+
+.dssa-pmpro-helper-field input[type="number"] {
+    width: 100px;
+}
+
+.dssa-pmpro-helper-field textarea {
+    width: 100%;
+    max-width: 600px;
+    min-height: 100px;
+}
+
+/* Tooltip for disabled fields */
+.ui-tooltip.dssa-tooltip {
+    background: #23282d;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 3px;
+    font-size: 12px;
+    max-width: 200px;
+}
+
+/* Modal overlay styles */
+.dssa-modal {
+    display: none;
+    position: fixed;
+    z-index: 10000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.dssa-modal-content {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 0;
+    width: 500px;
+    max-width: 90%;
+    border-radius: 6px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    animation: modalFadeIn 0.3s;
+}
+
+@keyframes modalFadeIn {
+    from { opacity: 0; transform: translateY(-50px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.dssa-modal-header {
+    padding: 15px 20px;
+    background: #f8f9fa;
+    border-bottom: 1px solid #dee2e6;
+    border-radius: 6px 6px 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dssa-modal-header h3 {
+    margin: 0;
+    font-size: 18px;
+    color: #1d2327;
+}
+
+.dssa-modal-close {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #646970;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+}
+
+.dssa-modal-close:hover {
+    color: #135e96;
+}
+
+.dssa-modal-body {
+    padding: 20px;
+}
+
+.dssa-modal-footer {
+    padding: 15px 20px;
+    background: #f8f9fa;
+    border-top: 1px solid #dee2e6;
+    border-radius: 0 0 6px 6px;
+    text-align: right;
+}
+
+.dssa-modal-footer .button {
+    margin-left: 10px;
+}
+
+.dssa-form-group {
+    margin-bottom: 15px;
+}
+
+.dssa-form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: #1d2327;
+}
+
+.dssa-form-group input[type="text"],
+.dssa-form-group select {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid #8c8f94;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.dssa-form-group input[type="text"]:focus,
+.dssa-form-group select:focus {
+    border-color: #2271b1;
+    box-shadow: 0 0 0 1px #2271b1;
+    outline: none;
+}
+
+.dssa-form-group .description {
+    margin-top: 5px;
+    font-size: 13px;
+    color: #646970;
+    font-style: italic;
+}
