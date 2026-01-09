@@ -1,0 +1,301 @@
+/* 
+ * DSSA PMPro Helper - Login System Styling
+ * Matches PMPro checkout style with bilingual support
+ */
+
+/* Main wrapper */
+.dssa-pmpro-login-wrapper,
+.dssa-pmpro-reset-wrapper {
+    max-width: 600px;
+    margin: 40px auto;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+/* Inner wrap */
+.pmpro_login_wrap,
+.pmpro_reset_wrap {
+    padding: 40px;
+}
+
+/* Headings */
+.pmpro_login_wrap h2,
+.pmpro_reset_wrap h2 {
+    color: #2c3e50;
+    font-size: 28px;
+    margin: 0 0 30px 0;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+    font-weight: 600;
+    text-align: center;
+}
+
+/* Form styling */
+.pmpro_form {
+    margin-top: 20px;
+}
+
+/* Field groups */
+.pmpro_checkout-field {
+    margin-bottom: 25px;
+}
+
+.pmpro_checkout-field label {
+    display: block;
+    margin-bottom: 8px;
+    color: #2c3e50;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.pmpro_asterisk {
+    color: #e74c3c;
+}
+
+/* Input fields */
+.pmpro_form .input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    background: #f8f9fa;
+    color: #333;
+    font-family: inherit;
+}
+
+.pmpro_form .input:focus {
+    outline: none;
+    border-color: #3498db;
+    background: #fff;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+}
+
+/* Password wrapper */
+.pmpro_password_wrapper {
+    position: relative;
+}
+
+.pmpro_show_password {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: #7f8c8d;
+    cursor: pointer;
+    padding: 4px;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+}
+
+.pmpro_show_password:hover {
+    color: #3498db;
+    background: rgba(52, 152, 219, 0.1);
+}
+
+.dashicons {
+    width: 20px;
+    height: 20px;
+    font-size: 20px;
+}
+
+/* Checkbox styling */
+.pmpro_checkout-field-rememberme {
+    margin: 25px 0;
+}
+
+.pmpro_label-inline {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    color: #2c3e50;
+    font-size: 14px;
+}
+
+.pmpro_label-inline input[type="checkbox"] {
+    margin-right: 10px;
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+
+/* Submit button */
+.pmpro_submit {
+    margin-top: 30px;
+}
+
+.pmpro_btn-submit-checkout {
+    width: 100%;
+    padding: 14px 20px;
+    background: #27ae60;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+    display: block;
+    font-family: inherit;
+}
+
+.pmpro_btn-submit-checkout:hover {
+    background: #219653;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(39, 174, 96, 0.2);
+}
+
+.pmpro_btn-submit-checkout:active {
+    transform: translateY(0);
+}
+
+.pmpro_btn-submit-checkout.loading {
+    opacity: 0.7;
+    cursor: not-allowed;
+    position: relative;
+    padding-right: 50px;
+}
+
+.pmpro_btn-submit-checkout.loading::after {
+    content: '';
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    border: 2px solid #fff;
+    border-top-color: transparent;
+    border-radius: 50%;
+    animation: dssa-spin 1s linear infinite;
+}
+
+@keyframes dssa-spin {
+    to { transform: translateY(-50%) rotate(360deg); }
+}
+
+/* Links section */
+.pmpro_login-links {
+    margin-top: 30px;
+    padding-top: 30px;
+    border-top: 1px solid #eee;
+}
+
+.pmpro_login-links p {
+    margin: 10px 0;
+    text-align: center;
+}
+
+.pmpro_btn-link {
+    color: #3498db !important;
+    text-decoration: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    padding: 0;
+    display: inline-block;
+}
+
+.pmpro_btn-link:hover {
+    color: #2980b9 !important;
+    text-decoration: underline;
+}
+
+/* Messages */
+.pmpro_message {
+    padding: 12px 15px;
+    margin-bottom: 25px;
+    border-radius: 6px;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.pmpro_error {
+    background: #fee;
+    border: 1px solid #f5c6cb;
+    color: #721c24;
+}
+
+.pmpro_success {
+    background: #d4edda;
+    border: 1px solid #c3e6cb;
+    color: #155724;
+}
+
+/* Already logged in */
+.dssa-already-logged-in {
+    text-align: center;
+    padding: 30px;
+    background: #f8f9fa;
+    border-radius: 6px;
+    color: #2c3e50;
+}
+
+/* Field description */
+.pmpro_field_description {
+    font-size: 13px;
+    color: #7f8c8d;
+    margin-top: 5px;
+    font-style: italic;
+}
+
+/* Invalid field styling */
+.pmpro_invalid {
+    border-color: #e74c3c !important;
+}
+
+.pmpro_invalid:focus {
+    box-shadow: 0 0 0 3px rgba(231, 76, 60, 0.1) !important;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .dssa-pmpro-login-wrapper,
+    .dssa-pmpro-reset-wrapper {
+        margin: 20px;
+        width: calc(100% - 40px);
+    }
+    
+    .pmpro_login_wrap,
+    .pmpro_reset_wrap {
+        padding: 25px;
+    }
+    
+    .pmpro_login_wrap h2,
+    .pmpro_reset_wrap h2 {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+    
+    .pmpro_login-links {
+        text-align: center;
+    }
+}
+
+/* Divi Theme compatibility */
+#main-content .container .dssa-pmpro-login-wrapper,
+#main-content .container .dssa-pmpro-reset-wrapper {
+    float: none !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    position: relative;
+    z-index: 100;
+}
+
+/* Ensure PMPro styles don't override ours */
+.pmpro_form .pmpro_checkout-field {
+    float: none !important;
+    width: 100% !important;
+}

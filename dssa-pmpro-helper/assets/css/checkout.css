@@ -1,0 +1,190 @@
+/**
+ * DSSA Checkout CSS
+ * Styles for conditional fields, validation, and pro-rata calculations
+ */
+
+/* Field Transitions */
+.pmpro_checkout-field,
+.pmpro_form-field,
+.form-field,
+tr {
+    transition: all 0.3s ease !important;
+    overflow: hidden !important;
+}
+
+/* Validation Feedback */
+.dssa-validation-feedback {
+    display: block !important;
+    margin-top: 8px !important;
+    padding: 10px 12px !important;
+    border-radius: 5px !important;
+    font-size: 13px !important;
+    line-height: 1.5 !important;
+    min-height: 20px !important;
+    transition: all 0.3s ease !important;
+    border-width: 1px !important;
+    border-style: solid !important;
+}
+
+/* Validating State */
+.dssa-validation-feedback.dssa-validating {
+    color: #856404 !important;
+    background-color: #fff3cd !important;
+    border-color: #ffeaa7 !important;
+}
+
+/* Success State */
+.dssa-validation-feedback.dssa-success {
+    color: #155724 !important;
+    background-color: #d4edda !important;
+    border-color: #c3e6cb !important;
+    font-weight: 500 !important;
+}
+
+.dssa-validation-feedback.dssa-success span {
+    color: #28a745 !important;
+    font-weight: bold !important;
+}
+
+/* Error State */
+.dssa-validation-feedback.dssa-error {
+    color: #721c24 !important;
+    background-color: #f8d7da !important;
+    border-color: #f5c6cb !important;
+}
+
+/* Input Field States */
+input[name="member_number"].dssa-valid,
+textarea[name="member_number"].dssa-valid {
+    border-color: #28a745 !important;
+    background-color: #f8fff9 !important;
+}
+
+input[name="member_number"].dssa-error,
+textarea[name="member_number"].dssa-error {
+    border-color: #dc3545 !important;
+    background-color: #fff8f8 !important;
+}
+
+/* Visibility is controlled via CSS class to avoid PMPro/Divi overrides */
+.dssa-hidden {
+    display: none !important;
+}
+
+/* Pro-rata Calculations Display */
+.dssa-prorata-calculations,
+.dssa-prorata-display {
+    background-color: #f8f9fa !important;
+    border: 1px solid #dee2e6 !important;
+    border-radius: 8px !important;
+    padding: 20px !important;
+    margin: 20px 0 !important;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05) !important;
+}
+
+.dssa-prorata-calculations h3,
+.dssa-prorata-display h4 {
+    color: #2c5e8e !important;
+    margin-top: 0 !important;
+    margin-bottom: 15px !important;
+    border-bottom: 2px solid #2c5e8e !important;
+    padding-bottom: 10px !important;
+}
+
+.dssa-prorata-table,
+.dssa-prorata-breakdown {
+    width: 100% !important;
+    border-collapse: collapse !important;
+    margin: 15px 0 !important;
+}
+
+.dssa-prorata-table td,
+.dssa-prorata-breakdown td {
+    padding: 8px 12px !important;
+    border-bottom: 1px solid #e9ecef !important;
+}
+
+.dssa-prorata-table tr:last-child td,
+.dssa-prorata-breakdown tr:last-child td {
+    border-bottom: none !important;
+}
+
+.dssa-prorata-table .dssa-amount,
+.dssa-prorata-breakdown .dssa-amount {
+    text-align: right !important;
+    font-family: monospace !important;
+    font-weight: 500 !important;
+}
+
+.dssa-prorata-table .dssa-total-row td,
+.dssa-prorata-breakdown .dssa-total td {
+    border-top: 2px solid #2c5e8e !important;
+    font-weight: 600 !important;
+    font-size: 1.1em !important;
+    padding-top: 12px !important;
+    color: #2c5e8e !important;
+}
+
+/* Notice and Info Boxes */
+.dssa-threshold-notice,
+.dssa-payment-threshold-message,
+.dssa-threshold-message,
+.dssa-legacy-payment-notice {
+    background-color: #e8f4fd !important;
+    border-left: 4px solid #2196f3 !important;
+    padding: 15px !important;
+    margin: 15px 0 !important;
+    border-radius: 4px !important;
+}
+
+.dssa-threshold-notice.dssa-info,
+.dssa-payment-threshold-message.dssa-notice {
+    background-color: #fff3cd !important;
+    border-left-color: #ffc107 !important;
+}
+
+.dssa-legacy-payment-notice.dssa-success {
+    background-color: #d4edda !important;
+    border-left-color: #28a745 !important;
+}
+
+.dssa-threshold-notice p,
+.dssa-payment-threshold-message p,
+.dssa-threshold-message p,
+.dssa-legacy-payment-notice p {
+    margin: 0 0 10px 0 !important;
+}
+
+.dssa-threshold-notice p:last-child,
+.dssa-payment-threshold-message p:last-child,
+.dssa-threshold-message p:last-child,
+.dssa-legacy-payment-notice p:last-child {
+    margin-bottom: 0 !important;
+}
+
+/* Hide Conflicting Messages */
+.pmpro_error:contains("Invalid membership number"),
+.pmpro_error:contains("membership number"),
+.pmpro_error:contains("Membership number") {
+    display: none !important;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .dssa-validation-feedback {
+        padding: 8px 10px !important;
+        font-size: 12px !important;
+    }
+    
+    .dssa-prorata-calculations,
+    .dssa-prorata-display {
+        padding: 15px !important;
+        margin: 15px 0 !important;
+    }
+    
+    .dssa-prorata-table td,
+    .dssa-prorata-breakdown td {
+        padding: 6px 8px !important;
+        font-size: 14px !important;
+    }
+}
